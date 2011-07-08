@@ -1,21 +1,23 @@
 class ReencodeGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.1.0"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3.7 > *"
+    def grailsVersion = "1.2 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-            "grails-app/views/error.gsp"
+            "grails-app/views/**/*",
+            "scripts/Eclipse.groovy",
+            "**/.git*"
     ]
 
     // TODO Fill in these fields
-    def author = "Your name"
-    def authorEmail = ""
-    def title = "Plugin summary/headline"
+    def author = "Daniel Henrique Alves Lima"
+    def authorEmail = "daniel@techdm.com"
+    def title = "Plugin to auto-detect charset and re-encode source files"
     def description = '''\\
-Brief description of the plugin.
+Plugin to auto-detect charset and re-encode source files.
 '''
 
     // URL to the plugin's documentation
